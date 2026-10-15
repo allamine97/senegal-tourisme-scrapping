@@ -45,7 +45,7 @@ def get_connection():
         port=os.getenv("PG_PORT", "5432"),
         dbname=os.getenv("PG_DATABASE", "senegal"),
         user=os.getenv("PG_USER", "postgres"),
-        password=os.getenv("PG_PASSWORD", "")
+        password=os.getenv("PG_PASSWORD", "passer1234")
     )
 
 

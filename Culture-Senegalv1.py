@@ -25,13 +25,13 @@ logging.basicConfig(
 # --------------------------------------------------
 
 def get_connection():
+    """Create a PostgreSQL connection using environment variables."""
     return psycopg.connect(
-        host=os.environ["PG_HOST"],
-        port=int(os.getenv("PG_PORT", "5432")),
-        dbname=os.environ["PG_DATABASE"],
-        user=os.environ["PG_USER"],
-        password=os.environ["PG_PASSWORD"],
-        connect_timeout=10,
+        host=os.getenv("PG_HOST", "localhost"),
+        port=os.getenv("PG_PORT", "5432"),
+        dbname=os.getenv("PG_DATABASE", "senegal"),
+        user=os.getenv("PG_USER", "postgres"),
+        password=os.getenv("PG_PASSWORD", "passer1234")
     )
 
 
